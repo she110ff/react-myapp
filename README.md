@@ -54,3 +54,7 @@ git push -u origin main
 
 ## Set rebase merge 
 Uncheck 'Allow merge commits'
+
+## Ask the ChatGPT
+1. yarn을 사용해서 chakra ui, redux-tookit, redux-persist, graphql, prettier, eslint 을 포함하는 react typescritp 앱 생성
+2. react hook lint 추가
