@@ -44,3 +44,11 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Set remote for initial local changes
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/she110ff/react-myapp.git
+git push -u origin main
+
+Uncheck 'Allow rebase merging'
