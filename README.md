@@ -51,4 +51,6 @@ git branch -M main
 git remote add origin https://github.com/she110ff/react-myapp.git
 git push -u origin main
 
+
+## Set rebase merge 
 Uncheck 'Allow rebase merging'
