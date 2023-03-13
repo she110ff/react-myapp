@@ -53,4 +53,4 @@ git push -u origin main
 
 
 ## Set rebase merge 
-Uncheck 'Allow rebase merging'
+Uncheck 'Allow merge commits'
