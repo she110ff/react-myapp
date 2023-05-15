@@ -9,8 +9,9 @@ import {
   theme as baseTheme,
 } from '@chakra-ui/react';
 import { store, persistor } from './store/configureStore';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import App from './App';
 
 export const theme = extendTheme(
   {
