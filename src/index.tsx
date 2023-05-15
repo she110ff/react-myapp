@@ -2,19 +2,37 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { ChakraProvider } from '@chakra-ui/react';
+import { theme as proTheme } from '@chakra-ui/pro-theme';
+import {
+  ChakraProvider,
+  extendTheme,
+  theme as baseTheme,
+} from '@chakra-ui/react';
 import { store, persistor } from './store/configureStore';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import App from './App';
+
+export const theme = extendTheme(
+  {
+    colors: { ...baseTheme.colors, brand: baseTheme.colors.blue },
+    fonts: {
+      heading: "'Fira CodeVariable', -apple-system, system-ui, sans-serif",
+      body: "'Fira CodeVariable', -apple-system, system-ui, sans-serif",
+    },
+  },
+  proTheme
+);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <ChakraProvider>
+        <ChakraProvider theme={theme}>
           <App />
         </ChakraProvider>
       </PersistGate>
